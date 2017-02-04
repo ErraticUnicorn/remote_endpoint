@@ -1,28 +1,26 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Problem 2: Implement a basic spin results end point
+Description
+Slot Machine Spin Results is our server end point that updates all player data and features when a spin is completed on the client. We do hundreds of millions of these requests per day, and we would like to see you make a very basic MySQL driven version.
+This can be just a normal PHP file that gets called, or you can implement more modern routing if you would like
+Data Storage
+Create a MySQL database that contains a player table with the following fields:
+Player ID
+Name
+Credits
+Lifetime Spins
+Salt Value
+Code
+Your code should validate the following request data: hash, coins won, coins bet, player ID
+Update the player data in MySQL if the data is valid
+Generate a JSON response with the following data:
+Player ID
+Name
+Credits
+Lifetime Spins
+Lifetime Average Return
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+See schema.rb for schema
+See player.rb and players_controller.rb for validations
+Run a rails server to use basic CRUD actions and see JSON from update and create actions.
